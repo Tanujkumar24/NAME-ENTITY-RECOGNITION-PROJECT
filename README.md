@@ -18,6 +18,7 @@ git add .
 git commit -m "Updated"
 
 git push origin main
+```
 
 ## How to run?
 
@@ -35,6 +36,7 @@ pip install -r requirements.txt
 
 ```bash
 python app.py
+```
 
 ## Live matarials docs
 
