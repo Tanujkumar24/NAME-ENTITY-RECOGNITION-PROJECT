@@ -87,6 +87,32 @@ class TrainPipeline:
 
         except Exception as e:
             raise NerException(e, sys) from e
+        
+    # This method is used to start model evaluation
+    def start_model_evaluation(
+        self,
+        data_transformation_artifact: DataTransformationArtifacts,
+        model_trainer_artifact: ModelTrainingArtifacts,
+    ) -> ModelEvaluationArtifacts:
+        try:
+            logging.info(
+                "Entered the start_model_evaluation method of Train pipeline class"
+            )
+            model_evaluation = ModelEvaluation(
+                data_transformation_artifacts=data_transformation_artifact,
+                model_training_artifacts=model_trainer_artifact,
+                model_evaluation_config=self.model_evaluation_config,
+            )
+
+            model_evaluation_artifact = model_evaluation.initiate_model_evaluation()
+
+            logging.info(
+                "Exited the start_model_evaluation method of Train pipeline class"
+            )
+            return model_evaluation_artifact
+
+        except Exception as e:
+            raise NerException(e, sys) from e
 
 
        # This method is used to start the training pipeline
