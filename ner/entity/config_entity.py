@@ -69,3 +69,4 @@ class ModelEvalConfig:
         )
         self.gcp_model_path: str = os.getcwd()
         self.gcp_local_path: str = GCP_MODEL_NAME
+

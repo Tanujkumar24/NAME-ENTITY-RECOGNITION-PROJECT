@@ -31,3 +31,9 @@ class ModelTrainingArtifacts:
 class ModelEvaluationArtifacts:
     trained_model_accuracy: float
     is_model_accepted: bool
+
+
+@dataclass
+class ModelPusherArtifacts:
+    bucket_name: str
+    trained_model_path: str
