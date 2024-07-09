@@ -2,6 +2,7 @@ import sys
 from ner.components.data_ingestion import DataIngestion
 from ner.components.data_transforamation import DataTransformation
 from ner.components.model_trainer import ModelTraining
+from ner.components.model_evaluation import ModelEvaluation
 from ner.configuration.gcloud import GCloud
 from ner.constants import *
 from ner.entity.artifact_entity import (DataIngestionArtifacts,DataTransformationArtifacts,ModelTrainingArtifacts,ModelEvaluationArtifacts)
