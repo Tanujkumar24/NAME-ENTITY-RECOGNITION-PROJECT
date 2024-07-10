@@ -70,3 +70,11 @@ class ModelEvalConfig:
         self.gcp_model_path: str = os.getcwd()
         self.gcp_local_path: str = GCP_MODEL_NAME
 
+@dataclass
+class ModelPusherConfig:
+    def __init__(self):
+        self.bucket_name: str = BUCKET_NAME
+        self.model_name: str = GCP_MODEL_NAME
+        self.upload_model_path: str = os.path.join(
+            ARTIFACTS_DIR, MODEL_TRAINING_ARTIFACTS_DIR
+        )
