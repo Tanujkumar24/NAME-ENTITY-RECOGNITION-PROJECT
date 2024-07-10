@@ -47,7 +47,7 @@ jobs:
 
       - run:
           name: push to private repository
-          command: docker push asia-south1-docker.pkg.dev/reliable-proton-428507-b4/ner-bert/ner-bert:latest
+          command: docker push $GOOGLE_COMPUTE_ZONE-docker.pkg.dev/reliable-proton-428507-b4/ner-bert/ner-bert:latest
 
   continuous-deployment:
     machine: true
